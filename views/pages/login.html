@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Login - MyStore</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- ✅ Latest Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- ✅ Your Custom Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+     <!-- Navbar Page -->
+    <nav class="navbar navbar-expand-lg navbar-light"  id="nav">
+      <div class="container" id="container">
+        <a class="navbar-brand" href="/">MyStore</a>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbar" 
+      >
+       <span class="navbar-toggler-icon"></span>
+       </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/shop" class="nav-link">Shop</a></li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="/login" class="nav-link">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="container mt-5">
+      <div class="row py-2">
+        <h1 class="text-left mb-5">Admin Login</h1>
+      <div class="col-12 col-lg-6 mt-5 pt-4">
+      <p>Welcome to MyStore! We are an online shop that offers a huge range of products across 10 top-selling categories, including Clothes, Jackets, Jeans, Shoes, Furniture, Mobiles, Recipes, Cold drinks, Electrical Items, and Tablets. Our goal is to provide quality products at affordable prices with a seamless online experience for our customers. Happy Shopping!</p>
+      </div>   
+     <div class="col-12 col-lg-6">
+      <form method="POST" action="/login">
+        <div class="mb-4">
+          <input type="text" class="form-control py-3" placeholder="FirstName" name="username" />
+        </div>
+          <div class="mb-4">
+          <input  type="text" class="form-control py-3" placeholder="LastName" name="lastname" />
+        </div>
+        <div class="mb-4">
+          <input
+            class="form-control py-3"
+            placeholder="Password"
+            name="password"
+            type="password"
+          />
+        </div>
+        <button  type="submit" class="btn btn-success mb-2">Login</button>
+      </form>
+      </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 MyStore. All Rights Reserved.
+    </footer>
+
+    <!-- ✅ Latest JS (same version)-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Manage Product - MyStore</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ✅ Latest Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- ✅ Your Custom Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+    <!-- Navbar Page-->
+    <nav class="navbar navbar-expand-lg navbar-light"  id="nav">
+      <div class="container" id="container">
+        <a class="navbar-brand" href="/admin">MyStore</a>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbar" 
+      >
+       <span class="navbar-toggler-icon"></span>
+       </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="/admin" class="nav-link">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a href="/admin" class="nav-link">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="container mt-4 text-center">
+      <h1>Admin Dashboard</h1>
+      <p>
+        Here you can manage products, categories, and orders (View, Update, Delete)
+      </p>
+      <!-- Links can be added later for Products, Categories, Orders Management -->
+    </div>
+
+    <div class="container-fluid mt-4">
+      <div class="row">
+
+        <div class="col-12 col-lg-12" id="admin">
+          <ul class="admin">
+            <li><i class='bx bxs-dashboard'></i><a href="/admin">Dashboard</a></li>
+            <li><i class='bx bxl-product-hunt'></i><a href="/dproduct">Product</a></li>
+            <li><i class='bx bxs-category' ></i><a href="/dcategory">Categories</a></li>
+            <li><i class='bx bx-list-check'></i><a href="/dorder">Orders</a></li>
+          </ul>
+        </div>
+       
+    <div class="col-12 col-lg-10 offset-lg-1 text-left">
+    <div class="responsive-table">
+    <a href="/addproducts" class="btn btn-dark mb-2">Add Product</a>
+    <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>S:No</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Detail</th>
+        <th>Price</th>
+        <th>Catogry</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="product-lists">
+      <!-- Product rows will be inserted here -->
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <nav>
+    <ul class="pagination justify-content-center" id="pagination">
+      <!-- Page numbers and buttons will be inserted here -->
+    </ul>
+  </nav>
+<!-- -->        
+    </div>
+     </div>      
+
+     <!-- Footer -->
+    <footer>
+      &copy; 2025 MyStore. All Rights Reserved.
+    </footer>
+
+    <!-- ✅ Latest JS (same version)-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

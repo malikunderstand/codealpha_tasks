@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Update Product - MyStore</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+    <div class="container" id="container">
+      <a class="navbar-brand" href="/admin">MyStore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="/dproduct" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="/dproduct" class="nav-link">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Heading -->
+  <div class="container mt-4 text-center">
+    <h1>Update Product Detail</h1>
+    <p>Here you can manage products.</p>
+  </div>
+
+  <!-- Form -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8 offset-lg-2">
+        <form action="/updateproduct" method="POST" enctype="multipart/form-data">
+          
+          <input type="hidden" name="id" value="<%= product.id %>">
+
+          <div class="form-group w-100 mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Product Name" value="<%= product.name %>" required>
+          </div>
+
+          <div class="form-group w-100 mb-3">
+            <textarea name="detail" class="form-control" placeholder="Product Detail" required><%= product.description %></textarea>
+          </div>
+
+          <div class="form-group w-100 mb-3">
+            <input type="number" name="price" class="form-control" placeholder="Product Price" value="<%= product.price %>" required>
+          </div>
+
+          <div class="form-group w-100 mb-3">
+            <select name="category_id" class="form-control" required>
+              <option value="">Select Category</option>
+              <% categories.forEach(cat => { %>
+                <option value="<%= cat.id %>" <%= cat.id == product.category_id ? 'selected' : '' %>><%= cat.name %></option>
+              <% }) %>
+            </select>
+          </div>
+
+          <div class="form-group w-100 mb-3">
+            <input type="file" name="image" class="form-control">
+          </div>
+
+          <% if (product.image) { %>
+            <img src="/uploads/<%= product.image %>" style="width:200px;height:100px;border-radius:10px;" alt="Product Image">
+          <% } %>
+
+          <br><br>
+          <button type="submit" class="btn btn-primary">Update Product</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-4">
+    &copy; 2025 MyStore. All Rights Reserved.
+  </footer>
+
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Cart</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- ✅ Latest Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- ✅ Your Custom Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Navbar Page -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+      <div class="container" id="container">
+        <a class="navbar-brand" href="/">MyStore</a>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbar" 
+      >
+       <span class="navbar-toggler-icon"></span>
+       </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto dropdown">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/shop" class="nav-link">Shop</a></li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+
+<div class="container mt-5">
+  <div class="row" id="view">
+    
+    <!-- 🧾 Left: Product Details -->
+    <div class="col-12 col-lg-8 col-md-7 col-sm-12">
+      <div class="card p-4 shadow-sm">
+        <div class="boxs" style="display: grid;grid-template-columns: auto auto;gap:10px;">
+            <div class="box">
+            <img src="/uploads/<%= product.image %>" class="img-fluid rounded mb-3" style="width:100%;height:40vh;" alt="Product Image">
+        </div>
+        <div class="box">
+        <h3><%= product.name %></h3>
+        <p><strong>Description:</strong> <%= product.description %></p>
+        <p><strong>Price:</strong> Rs <%= product.price %></p>
+        <p><strong>Category_Id:</strong> <%= product.category %></p>
+        <p><strong>Quantity:</strong> <%= product.quantity %></p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 💳 Right: Total Summary -->
+    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+      <div class="card p-3 shadow">
+        <% const total = product.price * product.quantity; %>
+        <h5>Order Summary</h5>
+        <hr>
+        <p>Price: Rs <%= product.price %></p>
+        <p>Qty: <%= product.quantity %></p>
+        <p><strong>Total: Rs <%= total %></strong></p>
+        <a href="/cart/placeorder/<%= product.id %>" class="btn btn-success mt-3 w-100">Place Order</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+    <footer>
+      &copy; 2025 MyStore. All Rights Reserved.
+    </footer>
+<!-- ✅ Latest JS (same version)-->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

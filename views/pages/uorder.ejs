@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Update Order - MyStore</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+    <div class="container" id="container">
+      <a class="navbar-brand" href="/admin">MyStore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="/dproduct" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="/dproduct" class="nav-link">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Heading -->
+  <div class="container mt-4 text-center">
+    <h1>Update Order Detail</h1>
+    <p>Here you can update order status.</p>
+  </div>
+
+  <!-- Form -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8   offset-lg-2">
+        <form action="/updateorder/<%= order.id %>" method="POST">
+          <input type="hidden" name="id" value="<%= order.id %>">
+
+          <div class="form-group w-100 mb-3">
+            <label>Product Name</label>
+            <input type="text" name="name" class="form-control" value="<%= order.name %>" readonly>
+          </div>
+
+          <div class="form-group w-100 mb-3">
+            <label>Description</label>
+            <input type="text" name="total" class="form-control" value="<%= order.description %>" readonly>
+          </div>
+
+          <div class="form-group w-100 mb-3">
+            <label>Order Time</label>
+            <input type="text" name="time" class="form-control" value="<%= order.updated_at %>" readonly>
+          </div>
+
+          <div class="form-group w-100 mb-3">
+            <label>Status</label>
+            <select name="status" class="form-select" required>
+              <option value="">Select Status</option>
+              <option value="Pending" <%= order.status === 'Pending' ? 'selected' : '' %>>Pending</option>
+              <option value="Placed" <%= order.status === 'Placed' ? 'selected' : '' %>>Placed</option>
+              <option value="Shipped" <%= order.status === 'Shipped' ? 'selected' : '' %>>Shipped</option>
+              <option value="Delivered" <%= order.status === 'Delivered' ? 'selected' : '' %>>Delivered</option>
+              <option value="Cancelled" <%= order.status === 'Cancelled' ? 'selected' : '' %>>Cancelled</option>
+              <option value="Unknown" <%= order.status === 'Unknown' ? 'selected' : '' %>>Unknown</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Update Status</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-4">
+    &copy; 2025 MyStore. All Rights Reserved.
+  </footer>
+
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>

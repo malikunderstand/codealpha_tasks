@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Toys & Baby Products - MyStore</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ✅ Latest Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- ✅ Your Custom Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+    <!-- Navbar Page -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+      <div class="container" id="container">
+        <a class="navbar-brand" href="/">MyStore</a>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbar" 
+      >
+       <span class="navbar-toggler-icon"></span>
+       </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/shop" class="nav-link">Shop</a></li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact</a>
+            </li>
+            <div class="search-container mt-2">
+            <form action="/search" method="get">
+            <input type="search" name="q" id="search" placeholder="Search Item Here....">
+            <button type="submit" class="btn"><i class='bx bx-search-alt-2'></i>
+            </button>
+            </form>
+            </div>
+            <li class="nav-item"><a class="nav-link" href="/cart"><i class='bx bxs-shopping-bag-alt'></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row py-3">
+            <div class="col-12">
+                <h2 class="text-center">Toys & Baby Products</h2>
+            </div>
+        </div>
+    </div>
+  <div class="container mt-5">
+  <div class="row" id="category">
+    <% if (products && products.length > 0) { %>
+      <% products.forEach(product => { %>
+           <div class="col-12 col-lg-3 col-md-4" id="cate">
+            <img src="/uploads/<%= product.image %>" class="img-fluid mb-3" />
+            <h6>Name: <%= product.name %></h6>
+            <p><%= product.description %></p>
+            <p><strong>Price Rs. <%= product.price %></strong></p>
+            <a href="/addcart/<%= product.id %>" class="btn btn-dark mb-3 w-100">Add To Cart</a>
+          </div>
+      <% }) %>
+    <% } else { %>
+      <p>No products found.</p>
+    <% } %>
+  </div>
+</div>
+
+
+
+
+
+
+     <!-- Footer -->
+    <footer>
+      &copy; 2025 MyStore. All Rights Reserved.
+    </footer>
+
+    <!-- ✅ Latest JS (same version)-->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/home.js"></script>
+  </body>
+</html>

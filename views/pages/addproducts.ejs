@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>AddProduct - MyStore</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ✅ Latest Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- ✅ Your Custom Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+    <!-- Navbar Page -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+      <div class="container" id="container">
+        <a class="navbar-brand" href="/">MyStore</a>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbar" 
+      >
+       <span class="navbar-toggler-icon"></span>
+       </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto dropdown">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/shop" class="nav-link">Shop</a></li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container mt-5 mb-5">
+      <div class="row py-2">
+        <h2 class="text-center mb-3">Add Product</h2>
+        <div class="col-12 col-lg-10 offset-lg-1">
+<form action="/addproducts" method="POST" enctype="multipart/form-data">
+  <div class="form-group w-100 mb-3">
+    <input type="text" name="name" class="form-control" placeholder="Product Name" required>
+  </div>
+  <div class="form-group w-100 mb-3">
+    <textarea name="description" class="form-control" placeholder="Product Description" required></textarea>
+  </div>
+  <div class="form-group w-100 mb-3">
+    <input type="number" name="price" class="form-control" placeholder="Product Price" required>
+  </div>
+  <div class="form-group w-100 mb-3">
+    <select name="category_id" class="form-control" required>
+      <option value="">Select Category</option>
+      <% categories.forEach(cat => { %>
+        <option value="<%= cat.id %>"><%= cat.name %></option>
+      <% }) %>
+    </select>
+  </div>
+  <div class="form-group w-100 mb-3">
+    <input type="file" name="image" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Add Product</button>
+</form>
+</div>
+      </div>
+    </div>
+
+     <!-- Footer -->
+    <footer>
+      &copy; 2025 MyStore. All Rights Reserved.
+    </footer>
+
+    <!-- ✅ Latest JS (same version)-->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/home.js"></script>
+    </body>
+    </html>

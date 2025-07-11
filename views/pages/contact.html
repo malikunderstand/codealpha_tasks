@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact - MyStore</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- ✅ Latest Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- ✅ Your Custom Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+   <!-- Navbar Page -->
+    <nav class="navbar navbar-expand-lg navbar-light"  id="nav">
+      <div class="container" id="container">
+        <a class="navbar-brand" href="/">MyStore</a>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbar" 
+      >
+       <span class="navbar-toggler-icon"></span>
+       </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/shop" class="nav-link">Shop</a></li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact</a>
+            </li>
+             </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="container mt-5">
+     <div class="row py-2">
+      <h2 class="text-center mb-5">Contact Us</h2>
+      <div class="col-12 col-lg-6 mt-1">
+      <h2>Any Question</h2>
+      <p>Use the form below to get in touch with us.</p>
+      <form id="contact-form" class="mt-4">
+        <div class="mb-3">
+          <input Type="text" name="" id="" class="form-control py-3" placeholder="Your Name" required/>
+        </div>
+        <div class="mb-3">
+          <input type="email" name="email" id="email" class="form-control py-3" placeholder="Email" required />
+        </div>
+        <div class="mb-3">
+          <input type="number" name="number" name="number" class="form-control py-3" placeholder="Number" required />
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control py-2" name="message" id="message" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+     <div class="col-12 col-lg-6 mt-1 text-lg-left">
+      <h2>Contact info</h2>
+      <p>Now with updated contact info—reach us easily for support and inquiries!</p>
+      <h2>Office</h2>
+      <p>Karachi,Gulshan Iqbal Sector<br>
+      765 pakistan
+      </p>
+      <p>+789 456 123</p>
+      <p>+123 456 789</p>
+      <p>MyStore876@gmal.com</p>
+      <p>PoweredBy MyStore876</p>
+      <p>© 2025 MyStore. All Rights Reserved.</p>
+     </div>
+    </div>
+     </div>
+
+     <!-- Footer -->
+    <footer>
+      &copy; 2025 MyStore. All Rights Reserved.
+    </footer>
+    <script>
+      // Email send Through email.js
+(function () {
+  emailjs.init('zQVLYNOVWwAbLx9NW');
+})();
+
+document
+  .getElementById('contact-form')
+  .addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_2hwulc8', 'template_6wupp6c', this).then(
+      () => {
+        alert('Message sent successfully!');
+      },
+      (error) => {
+        alert('Failed to send message. Please try again.');
+        console.log(error);
+      }
+    );
+    this.reset();
+  });
+    </script>
+    <!-- ✅ Latest JS (same version)-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

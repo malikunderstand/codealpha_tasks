@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add to Cart - MyStore</title>
+   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- ✅ Latest Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- ✅ Your Custom Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<!-- Navbar Page -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+      <div class="container" id="container">
+        <a class="navbar-brand" href="/">MyStore</a>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbar" 
+      >
+       <span class="navbar-toggler-icon"></span>
+       </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto dropdown">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/shop" class="nav-link">Shop</a></li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+
+
+<div class="container mt-5 mb-5">
+  <h2 class="text-center mb-4">🛍️ Add Product to Cart</h2>
+
+  <div class="card p-4 shadow-lg">
+    <form action="/addcart" method="POST">
+      <div class="row" id="addcart">
+        <!-- Image -->
+        <div class="col-md-5 text-center">
+          <img src="/uploads/<%= product.image %>" class="img-fluid rounded" alt="Product Image" style="width:100%;max-height: 250px;">
+        </div>
+
+        <!-- Info -->
+        <div class="col-md-7">
+          <input type="hidden" name="id" value="<%= product.id %>">
+          <h3><%= product.name %></h3>
+          <p><%= product.description %></p>
+          <p>category_id: <%= product.category_id %></p>
+          <p><strong>Price:</strong> Rs <%= product.price %></p>
+           <label for="quantity">Quantity</label>
+          <div class="input-group mb-3 w-50">
+            <span class="input-group-text bg-dark text-light"  type="button" id="decrease">-</span>
+            <input type="number" value="1" id="display" name="quantity" class="form-control text-center bg-light text-dark" readonly required>
+            <div class="input-group-prepand">
+              <span class="input-group-text bg-dark text-light" type="button" id="increase">+</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-success">Add to Cart</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+    <footer>
+      &copy; 2025 MyStore. All Rights Reserved.
+    </footer>
+
+     <script>
+      // Quantity Increase And Decrease
+      var incr = document.getElementById('increase');
+      var disp = document.getElementById('display');
+      var decr = document.getElementById('decrease');
+
+      incr.addEventListener('click',function(){
+      var current = parseInt(display.value);
+      display.value = current + 1
+      });
+
+      decr.addEventListener('click',function(){
+      var current = parseInt(display.value);
+      display.value = current - 1;
+      });
+
+     </script>
+
+<!-- ✅ Latest JS (same version)-->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,902 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Navbar */
+#container{
+  padding: 20px;
+}
+
+.collapse{
+transition: all 0.3s;
+background-color: white;
+margin-left: -10px;
+width: 100%;
+}
+
+.navbar-brand{
+font-size: 35px;
+}
+
+.navbar-nav li a{
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-nav li a i{
+  margin-top: 3px;
+  font-size: 25px;
+}
+
+/* Sticky Header */
+.sticky{
+  background-color: white;
+  position: fixed;
+  margin-top: 0%;
+  top:0%;
+  left: 0%;
+  width: 100%;
+  height: 100px;
+  transition: all 0s;
+  color:black;
+  z-index: 1000;
+}
+
+/* Search Page */
+.search-container button i{
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.search-container {
+  position: relative;
+}
+
+#search {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: width 0.4s ease, opacity 0.4s ease;
+  padding: 5px;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+
+.search-container:hover #search {
+  width: 250px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Home Page */
+
+section{
+  padding: 50px;
+}
+
+.homes{
+  background-image:url(/img/1.png) ;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 450px 350px;
+  height:70vh;
+  margin-top: -50px;
+}
+
+.home{
+  position:absolute;
+  margin-top: 2%;
+  margin-left: 3%;
+}
+
+.home h6{
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.home h1{
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.home p{
+  margin-top: 20px;
+  width:600px;
+  margin-bottom: 30px
+}
+
+.home a{
+  margin-top: 20px;
+  text-decoration: none;
+  color:white;
+  padding:18px 13px;
+  background-color: black;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.home a:hover{
+  background-color: white;
+  color:black;
+  border: 1px solid Black;
+  transition: all 0.4s;
+}
+
+.home a i{
+vertical-align: middle;
+}
+
+/* category page in home page */
+.box{
+  text-align: center;
+}
+
+.box img{
+width:100%;
+height:20vh;
+border-radius: 11px 5px;
+}
+
+.box a{
+  text-decoration: none;
+  color:black;
+}
+
+.box1 img{
+width:100%;
+height:20vh;
+border-radius: 11px 5px;
+}
+
+.box1 a{
+  text-decoration: none;
+  color:black;
+}
+
+.box a:hover{
+background-color: crimson;
+color: white;
+transition:all 0.3s;
+border-color: red;
+}
+
+.modal-header button{
+  font-size: 20px;
+}
+
+/* product home page */
+#product-list img{
+width:100%;height:50vh;border-radius:11px 5px;
+}
+
+#product-list h5{
+  font-size: 13px;
+}
+
+#product-list p{
+  font-size: 14px;
+}
+
+/* product shop page*/
+#product-list1 img{
+width:100%;height:50vh;border-radius:11px 5px;
+}
+
+#product-list1 h5{
+  font-size: 13px;
+}
+
+#product-list1 p{
+  font-size: 14px;
+}
+
+/* Delivery Page */
+#img{
+  height:130px;
+}
+
+/* Trending Page */
+#h21{
+  font-size: 50px;
+}
+#img1{
+  margin-top: 30px;
+  border-radius: 11px 5px;
+  height:50vh;
+  width:100%;
+  margin-bottom: 20px;
+}
+
+/* Carousel Page */
+.carousel-item img{
+  width:103%;
+  height:60vh;
+  border-radius: 11px 5px;
+}
+
+.carousel-indicators li{
+  border-radius: 100%;
+}
+
+/* New Page */
+#h22{
+  font-size: 50px;
+}
+#img2{
+  margin-top: 30px;
+  border-radius: 11px 5px;
+  height:50vh;
+  width:100%;
+  margin-bottom: 20px;
+}
+#bottom{
+  margin-bottom: 100px;
+}
+
+/* Sale Page */
+.jumbotron{
+  margin-top: 80px;
+  background-color: black;
+  color: white;
+}
+
+.jumbotron img{
+  width: 300px;
+  margin-top: -190px;
+}
+
+/* Shop Page */
+#box4 a{
+  display: block;
+  text-decoration: none;
+  color:black;
+}
+
+#box4 a:hover{
+  text-decoration: underline;
+}
+
+
+#box4 p:hover{
+  text-decoration: underline;
+}
+
+/* Footer Page */
+footer{
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+}
+
+/* Contact Page */
+#contact a{
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
+
+#contact h6{
+  position: absolute;
+  font-size: 45px;
+  top:45%;
+  left:17%;
+}
+/* Admin dashboard page */
+#admin{
+  text-align: center;
+  background-color: black;
+  color:white;
+  border: 11px 5px;
+  height:80px;
+  margin-bottom: 20px;
+}
+.admin li{
+  list-style: none;
+  display: inline-block;
+   padding-top: 30px;
+}
+.admin li a{
+  text-decoration: none;
+  color:white;
+  padding-top: 20px;
+  margin-right: 10px;
+}
+
+.admin li i{
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* category item */
+/* #category{
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+} */
+#cate img{
+  width: 100%;
+  height:35vh;
+  border-radius:11px 5px;
+}
+
+#cate h6{
+  font-size: 12px;
+}
+
+#cate p{
+  font-size: 12px;
+}
+
+/* responsive Screen px*/
+@media(max-width:1280px){
+ /* category product item */
+#cate p{
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* responsive screen 992px */
+@media(max-width:992px){
+  /* home page */
+  .homes{
+  background-image:url(/img/1.png) ;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 300px 250px;
+  height:65vh;
+  margin-top: -60px;
+}
+
+.home{
+  position:absolute;
+  margin-top: 0%;
+  margin-left: 0%;
+}
+
+.home h6{
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.home h1{
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.home p{
+  margin-top: 20px;
+  width:600px;
+  margin-bottom: 30px
+}
+
+  /* home page  description*/
+ .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /*shop page  description */
+  .description1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .name {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+/* category product page */
+  #cate p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+}
+
+/* responsive Screen 768px*/
+@media(max-width:768px){
+  /* home page */
+  section{
+    padding: 40px;
+  }
+
+  .homes{
+  background-image:url(/img/1.png) ;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 290px 250px;
+  height:70vh;
+  margin-top: -60px;
+}
+
+.home{
+  position:absolute;
+  margin-top: 0%;
+  margin-left: 0%;
+}
+
+.home h6{
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.home h1{
+  margin-top: 0px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.home p{
+  margin-top: 0px;
+  width:400px;
+  margin-bottom: 30px
+}
+
+.home a{
+  margin-top: 0px;
+  text-decoration: none;
+  color:white;
+  padding:18px 13px;
+  background-color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.home a:hover{
+  background-color: white;
+  color:black;
+  border: 1px solid Black;
+  transition: all 0.4s;
+}
+
+.home a i{
+vertical-align: middle;
+}
+
+  /* jumbotron */
+.jumbotron img{
+  width: 300px;
+  margin-top: -190px;
+}
+
+#img{
+  height:80px;
+}
+
+/* product shop page */
+#product-list1 img{
+width:100%;height:40vh;border-radius:11px 5px;
+}
+
+#product-list1 h5{
+  font-size: 10px;
+}
+
+#product-list1 p{
+  font-size: 13px;
+}
+
+/* dashboar manage table */
+.responsive-table{
+width:700px;
+overflow-x: auto;
+margin: auto auto;
+}
+}
+
+/* responsive Screen 480px*/
+@media(max-width:480px){
+  /* home page */
+  section{
+  padding: 50px;
+  height: 300px;
+}
+  .homes{
+  background-image:url(/img/1.png) ;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: right;
+  background-size: 175px 200px;
+  height:50vh;
+  margin-top: -45px;
+  margin-right: -20px;
+}
+
+.home{
+  position:absolute;
+  margin-top: -5%;
+  margin-left: -2%;
+  width: 300px;
+}
+
+.home h6{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.home h1{
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home p{
+  margin-top: 0px;
+  width:250px;
+  margin-bottom: 30px
+}
+
+.home a{
+  margin-top: 0px;
+  text-decoration: none;
+  color:white;
+  padding:18px 13px;
+  background-color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.home a:hover{
+  background-color: white;
+  color:black;
+  border: 1px solid Black;
+  transition: all 0.4s;
+}
+
+.home a i{
+vertical-align: middle;
+}
+
+/* product in home page */
+#product-list{
+   display: grid;
+    grid-template-columns: auto auto;
+}
+
+/* product in shop page */
+#product-list1{
+   display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#product-list1 img{
+width:100%;height:30vh;border-radius:11px 5px;
+margin-top: 50px;
+}
+
+#product-list1 h6{
+  font-size: 12px;
+}
+
+#product-list1 p{
+  font-size: 10px;
+}
+
+.box{
+  position: relative;
+}
+#product-list1 a{
+  position: absolute;
+  width:100%;
+  top:100%;
+}
+
+/* home page  description*/
+ .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /*shop page  description */
+  .description1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .name {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Product in category wise */
+  #category{
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  #cate img{
+  width: 100%;
+  height:30vh;
+  border-radius:11px 5px;
+}
+
+#cate p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  #cate h6{
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Sirf 2 lines dikhayega */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+#cate{
+  width:100%;
+  height:auto;
+}
+
+#cate a{
+  font-size: 12px;
+}
+
+#cate h6{
+  font-size: 10px
+}
+
+#cate p{
+  font-size: 10px;
+}
+
+/* Delivery Page */
+#delivery{
+display: grid;
+grid-template-columns: auto auto auto;
+}
+
+#delivery img{
+  width: 100%;
+  height: 25vh;
+}
+
+#delivery p{
+  font-size: 10px;
+}
+
+/* Trend Page */
+#trend{
+display: grid;
+grid-template-columns: auto auto auto;
+}
+
+#box2 a{
+font-size: 12px;
+}
+
+#box2 h5{
+  font-size: 13px;
+}
+
+#img1{
+height:30vh;
+}
+
+/* carousel */
+#carousel{
+  height: auto;
+}
+
+.carousel-item img{
+  width:100%;
+  height:50vh;
+  border-radius: 11px 5px;
+}
+
+/* New Page */
+#new{
+display: grid;
+grid-template-columns: auto auto auto;
+}
+
+#box3 h5{
+font-size: 8px;
+}
+
+#img2{
+height: 30vh;
+}
+
+/* Shop Page */
+#shop{
+display: grid;
+grid-template-columns: auto auto;
+}
+
+#box3 h5{
+font-size: 12px;
+}
+
+/* category page */
+#category-list{
+display: grid;
+grid-template-columns: auto auto auto;
+}
+
+.box img{
+width:100%;
+height:20vh;
+border-radius: 11px 5px;
+}
+
+.box a {
+  font-size: 10px;
+}
+
+.box a h5{
+  font-size: 13px;
+}
+
+
+/* product page */
+#product-list{
+display: grid;
+grid-template-columns: auto auto auto;
+}
+
+#product-list img{
+width:100%;height:20vh;border-radius:11px 5px;
+}
+
+#product-list h5{
+  font-size: 8px;
+}
+
+#product-list p{
+  font-size: 10px;
+}
+
+/* jumbotron */
+.jumbotron img{
+  width: 200px;
+  margin-top: -170px;
+  margin-left: -70px;
+}
+
+#jumb{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.jumbotron p{
+  width: 300px;
+}
+
+#img{
+  height:80px;
+}
+
+/* Addcart page form */
+#addcart{
+  display:block;
+  text-align: center;
+}
+
+#addcart input{
+margin: auto auto;
+}
+
+/* viewcart page form */
+#view{
+display: block;
+}
+
+/* dashboard manage table */
+.responsive-table{
+  width: 430px;
+  overflow-x: auto;
+  margin: auto auto;
+}
+
+#simg{
+  height: 100px;
+}
+}
+
+/* responsive screen 360px */
+@media(max-width:360px){
+  #category-list img{
+    width:100%;
+  }
+  #category-list h5{
+    font-size: 15px;
+  }
+
+  /* Trend */
+  #trend h5{
+  font-size: 10px;
+  }
+
+  /* Trend */
+  #new a{
+  font-size: 10px;
+  }
+
+  /* jumbotron */
+.jumbotron img{
+  text-align: center;
+  width: 200px;
+  display: block;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin: auto auto;
+  padding-top: 20px;
+}
+
+#jumb{
+  display: grid;
+  text-align: center;
+  grid-template-columns: auto;
+}
+
+.jumbotron p{
+  width: 300px;
+  margin: auto auto;
+}
+
+#img{
+  height:50px;
+}
+
+/* dashboard manage table */
+.responsive-table{
+  width: 300px;
+  overflow-x: auto;
+  margin: auto auto;
+}
+
+/* admin dashboard */
+#admin{
+  text-align: center;
+  background-color: black;
+  color:white;
+  border: 11px 5px;
+  height:150px;
+  margin-bottom: 20px;
+}
+.admin li{
+  list-style: none;
+  display: inline-block;
+   padding-top: 30px;
+}
+
+.admin li i{
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.font{
+  font-size: 10px;
+}
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- ✅ Latest Bootstrap 5.3.3 CSS -->
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<!-- ✅ Your Custom Styles -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+   <!-- Navbar Page -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+      <div class="container" id="container">
+        <a class="navbar-brand" href="/">MyStore</a>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbar" 
+      >
+       <span class="navbar-toggler-icon"></span>
+       </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto dropdown">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/shop" class="nav-link">Shop</a></li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3">
+    <div class="row py-3">
+  <h2><b>Login Page</b></h2>
+  <div class="col-12 col-lg-6 offset-lg-3">
+  <form action="/logins" method="POST" class="mb-2">
+    <div class="form-group mb-3">
+    <input type="email" name="email" placeholder="Email" class="form-control" required>
+    </div>
+    <div class="form-group mb-3">
+   <input type="password" name="password" placeholder="Password" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary form-control ">Login</button>
+  </form>
+  <p>Don't have an account? <a href="/register">Register here</a></p>
+  
+    </div>
+</div>
+</div>
+  <!-- Footer -->
+    <footer>
+      &copy; 2025 MyStore. All Rights Reserved.
+    </footer>
+
+    <!-- ✅ Latest JS (same version)-->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/home.js"></script>
+  </body>
+</html>

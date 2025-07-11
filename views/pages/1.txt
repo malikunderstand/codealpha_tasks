@@ -1,0 +1,32 @@
+🔟 Top 10 E-commerce Categories:
+Clothing & Fashion
+👕 Shirts, 👖 Jeans, 👗 Dresses, Shoes, Bags, Accessories
+(Men, Women, Kids fashion)
+
+Electronics & Gadgets
+📱 Mobiles, Laptops, Cameras, Smartwatches, Headphones
+
+Home & Furniture
+🛏️ Beds, Sofas, Chairs, Tables, Kitchenware, Décor items
+
+Beauty & Personal Care
+💄 Makeup, Skincare, Haircare, Grooming, Perfumes
+
+Health & Fitness
+💊 Supplements, Fitness Equipment, Yoga Mats, Protein
+
+Groceries & Essentials
+🥦 Vegetables, Fruits, Dairy, Snacks, Beverages
+
+Footwear
+👟 Sports Shoes, Casual Shoes, Sandals, Heels
+
+Books & Stationery
+📚 Novels, Academic Books, Pens, Notebooks, Art Supplies
+
+Toys & Baby Products
+🧸 Baby Clothes, Diapers, Toys, Kids Gear, Feeding Bottles
+
+Automobile Accessories
+🚗 Car/Bike Covers, Seat Covers, Helmets, Bike Accessories
+
