@@ -4,6 +4,14 @@ body {
   margin: 0px;
 }
 
+body img{
+  transition: transform ease 0.3s;
+}
+
+body img:hover{
+  transform: scale(1.1);
+}
+
 /* Navbar */
 #container{
   padding: 20px;
